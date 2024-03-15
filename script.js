@@ -1,6 +1,6 @@
 function search() {
     var id = document.getElementById('employeeId').value;
-    fetch('https://script.google.com/macros/s/AKfycbyo_Goc2vs7z8oSaHnRgGfjIEgymoM6xZxr_UPKUsN4npWgZ6VHzZ8yNKW5CWXsILTU/exec?id=' + id)
+    fetch('https://script.google.com/macros/s/AKfycbzwR5TTHkuTtkFOKbgApl4yp7XfGjzLCNOPx8tR6yjpbA9QvSZjlpeNoj4F1-ha1upd/exec?id=' + id)
       .then(response => response.json())
       .then(data => {
         var table = document.getElementById('results');
