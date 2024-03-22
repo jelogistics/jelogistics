@@ -2,9 +2,9 @@ function search() {
   var id = document.getElementById('employeeId').value + '@df';
   console.log(id);
 
-  const spreadsheetId = '1xQ-UhE36gClbOnCo0X5HvEIEkhEHTWxB4wZ4KMYCSHE'; // Your actual spreadsheet ID
-  const range = '시트1!C1:K300'; // Adjust the range as needed
-  const apiKey = 'AIzaSyCpQ8NBW47VQaFMGujdDHV1cEAY_kOjbrg'; // Your actual API key
+  const spreadsheetId = '1xQ-UhE36gClbOnCo0X5HvEIEkhEHTWxB4wZ4KMYCSHE';
+  const range = '시트1!C1:K300';
+  const apiKey = 'AIzaSyCpQ8NBW47VQaFMGujdDHV1cEAY_kOjbrg';
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
   fetch(url)
@@ -27,15 +27,15 @@ function displayResults(data, id) {
   const values = data.values;
   let resultsHTML = '<table border="1"><tr>';
 
-  // Generate table headers from the first row
+  
   values[0].forEach(header => {
     resultsHTML += `<th>${header}</th>`;
   });
   resultsHTML += '</tr>';
 
-  // Filter and display only the rows that match the search ID
+  
   values.slice(1).forEach(row => {
-    if (row.includes(id)) { // Check if the current row contains the search ID
+    if (row.includes(id)) {
       resultsHTML += '<tr>';
       row.forEach(cell => {
         resultsHTML += `<td>${cell}</td>`;
@@ -46,7 +46,7 @@ function displayResults(data, id) {
 
   resultsHTML += '</table>';
 
-  // If no results are found
+ 
   if (resultsHTML === '<table border="1"><tr></tr></table>') {
     resultsHTML = 'No results found.';
   }
