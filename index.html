@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>직원 검색</title>
+    <title>준은로지스틱스 분실파손 조회</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -11,9 +11,14 @@
             background-color: #f0f0f0; /* Light grey background */
         }
 
+        .logo-container {
+            display: flex;
+            justify-content: center; /* Centers the logo horizontally */
+            margin: 20px 0; /* Adjust for spacing */
+        }
+
         #logo {
-            height: 50px;
-            margin: 20px; /* Adjust for spacing */
+            height: 60px; /* Slightly larger logo */
         }
 
         #searchBox {
@@ -47,9 +52,12 @@
 
         /* Responsive styling */
         @media (max-width: 600px) {
+            .logo-container {
+                margin: 10px 0;
+            }
+
             #logo {
-                height: 30px; /* Smaller logo for smaller screens */
-                margin: 10px;
+                height: 50px; /* Adjust size for smaller screens */
             }
 
             #searchBox, #results {
@@ -64,11 +72,13 @@
     </style>
 </head>
 <body>
-    <img id="logo" src="https://github.com/jelogistics/jelogistics/blob/main/KakaoTalk_20230911_160851338.png?raw=true" alt="Company Logo">
+    <div class="logo-container">
+        <img id="logo" src="https://github.com/jelogistics/jelogistics/blob/main/KakaoTalk_20230911_160851338.png?raw=true" alt="Company Logo">
+    </div>
     <div id="searchBox">
         <form onsubmit="search(); return false;">
             <label for="employeeId" style="margin-right: 10px;">아이디를 입력하세요:</label>
-            <input type="text" id="employeeId" placeholder="아이디">
+            <input type="text" id="employeeId" placeholder="퀵플렉서 아이디">
             <button type="submit">검색</button>
         </form>
     </div>
@@ -77,3 +87,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
