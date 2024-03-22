@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>직원 검색</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light grey background */
+        }
+
+        #logo {
+            height: 50px;
+            margin: 20px; /* Adjust for spacing */
+        }
+
+        #searchBox {
+            background-color: #007bff; /* Blue background for the search box area */
+            padding: 20px;
+            color: #ffffff; /* White text color */
+            text-align: center; /* Center aligns the content */
+        }
+
+        #searchBox input, #searchBox button {
+            padding: 10px;
+            margin-top: 10px; /* Adds spacing */
+        }
+
+        #results {
+            padding: 20px;
+        }
+
+        #results table {
+            font-size: 0.9rem;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ffffff; /* White background for results */
+        }
+
+        #results th, #results td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            #logo {
+                height: 30px; /* Smaller logo for smaller screens */
+                margin: 10px;
+            }
+
+            #searchBox, #results {
+                padding: 10px;
+            }
+
+            #searchBox input, #searchBox button {
+                width: 100%; /* Full width for smaller screens */
+                box-sizing: border-box; /* Ensures padding doesn't add to width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="https://github.com/jelogistics/jelogistics/blob/main/KakaoTalk_20230911_160851338.png?raw=true" alt="Company Logo">
+    <div id="searchBox">
+        <form onsubmit="search(); return false;">
+            <label for="employeeId" style="margin-right: 10px;">아이디를 입력하세요:</label>
+            <input type="text" id="employeeId" placeholder="아이디">
+            <button type="submit">검색</button>
+        </form>
+    </div>
+    <div id="results" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
