@@ -3,7 +3,7 @@ function search() {
   console.log(id);
 
   const spreadsheetId = '1xQ-UhE36gClbOnCo0X5HvEIEkhEHTWxB4wZ4KMYCSHE'; // Your actual spreadsheet ID
-  const range = '시트1!A1:K300'; // Adjust the range as needed
+  const range = '시트1!C1:K300'; // Adjust the range as needed
   const apiKey = 'AIzaSyCpQ8NBW47VQaFMGujdDHV1cEAY_kOjbrg'; // Your actual API key
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
