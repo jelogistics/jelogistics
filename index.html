@@ -2,35 +2,36 @@
 <html>
 <head>
     <title>준은로지스틱스 분실파손 조회</title>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon"> <!-- Favicon link -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Light grey background */
+            background-color: #f0f0f0;
         }
 
         .logo-container {
-            display: flex;
-            justify-content: center; /* Centers the logo horizontally */
-            margin: 20px 0; /* Adjust for spacing */
+            text-align: center; /* Centers the logo */
+            padding: 20px;
         }
 
         #logo {
-            height: 60px; /* Slightly larger logo */
+            height: 60px; /* Increased size */
+            margin: auto; /* Ensures the margin applies on all sides equally */
         }
 
         #searchBox {
-            background-color: #007bff; /* Blue background for the search box area */
+            background-color: #007bff;
             padding: 20px;
-            color: #ffffff; /* White text color */
-            text-align: center; /* Center aligns the content */
+            color: #ffffff;
+            text-align: center;
         }
 
         #searchBox input, #searchBox button {
             padding: 10px;
-            margin-top: 10px; /* Adds spacing */
+            margin-top: 10px;
         }
 
         #results {
@@ -41,7 +42,7 @@
             font-size: 0.9rem;
             border-collapse: collapse;
             width: 100%;
-            background-color: #ffffff; /* White background for results */
+            background-color: #ffffff;
         }
 
         #results th, #results td {
@@ -50,14 +51,9 @@
             text-align: left;
         }
 
-        /* Responsive styling */
         @media (max-width: 600px) {
-            .logo-container {
-                margin: 10px 0;
-            }
-
             #logo {
-                height: 50px; /* Adjust size for smaller screens */
+                height: 40px; /* Adjust for smaller screens */
             }
 
             #searchBox, #results {
@@ -65,8 +61,8 @@
             }
 
             #searchBox input, #searchBox button {
-                width: 100%; /* Full width for smaller screens */
-                box-sizing: border-box; /* Ensures padding doesn't add to width */
+                width: 100%;
+                box-sizing: border-box;
             }
         }
     </style>
@@ -78,7 +74,7 @@
     <div id="searchBox">
         <form onsubmit="search(); return false;">
             <label for="employeeId" style="margin-right: 10px;">아이디를 입력하세요:</label>
-            <input type="text" id="employeeId" placeholder="퀵플렉서 아이디">
+            <input type="text" id="employeeId" placeholder="아이디">
             <button type="submit">검색</button>
         </form>
     </div>
@@ -87,4 +83,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
