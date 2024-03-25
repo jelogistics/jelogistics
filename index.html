@@ -13,13 +13,13 @@
         }
 
         .logo-container {
-            text-align: center; /* Centers the logo */
+            text-align: center;
             padding: 20px;
         }
 
         #logo {
-            height: 60px; /* Increased size */
-            margin: auto; /* Ensures the margin applies on all sides equally */
+            height: 60px;
+            margin: auto;
         }
 
         #searchBox {
@@ -44,16 +44,18 @@
             width: 100%;
             background-color: #ffffff;
         }
+                    
+
 
         #results th, #results td {
             border: 1px solid #ccc;
             padding: 8px;
-            text-align: left;
+            text-align: center;
         }
 
         @media (max-width: 600px) {
             #logo {
-                height: 40px; /* Adjust for smaller screens */
+                height: 40px;
             }
 
             #searchBox, #results {
@@ -63,6 +65,51 @@
             #searchBox input, #searchBox button {
                 width: 100%;
                 box-sizing: border-box;
+            }
+
+            /* 날짜 */
+            #results th:nth-child(1) {
+                min-width: 30px;
+            }
+            
+            /* 캠프 */
+            #results th:nth-child(2) {
+                min-width: 40px;
+            }
+
+            /* ID */
+            #results th:nth-child(3) {
+                min-width: 100px;
+            }
+
+            /* 이름 */
+            #results th:nth-child(4) {
+                min-width: 50px;
+            }
+
+            /* 상세 */
+            #results th:nth-child(5) {
+                min-width: 85px;
+            }
+
+            /* 수량 */
+            #results th:nth-child(6) {
+                min-width: 35px;
+            }
+
+            /* 차감금액 */
+            #results th:nth-child(7) {
+                min-width: 70px;
+            }
+
+            /* 운송장번호 */
+            #results th:nth-child(8) {
+                min-width: 100px;
+            }
+
+            /* 상품명(상세) */
+            #results th:nth-child(9) {
+                min-width: 200px;
             }
         }
     </style>
