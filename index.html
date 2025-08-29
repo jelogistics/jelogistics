@@ -1,9 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <meta charset="utf-8">
     <title>준은로지스틱스 분실파손 조회</title>
-    <link rel="icon" href="https://github.com/jelogistics/jelogistics/blob/main/je-logo_web.jpg?raw=true" type="image/x-icon"> <!-- Favicon link -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://github.com/jelogistics/jelogistics/blob/main/je-logo_web.jpg?raw=true" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (카카오/페북 미리보기) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="준은로지스틱스 분실파손 조회">
+    <meta property="og:description" content="퀵플렉서 아이디로 분실·파손 내역을 간편 조회하세요.">
+    <meta property="og:url" content="https://jelogistics.github.io/jelogistics/">
+    <meta property="og:image" content="https://jelogistics.github.io/jelogistics/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ko_KR">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,8 +59,6 @@
             width: 100%;
             background-color: #ffffff;
         }
-                    
-
 
         #results th, #results td {
             border: 1px solid #ccc;
@@ -68,49 +81,23 @@
             }
 
             /* 날짜 */
-            #results th:nth-child(1) {
-                min-width: 30px;
-            }
-            
+            #results th:nth-child(1) { min-width: 30px; }
             /* 캠프 */
-            #results th:nth-child(2) {
-                min-width: 40px;
-            }
-
+            #results th:nth-child(2) { min-width: 40px; }
             /* ID */
-            #results th:nth-child(3) {
-                min-width: 100px;
-            }
-
+            #results th:nth-child(3) { min-width: 100px; }
             /* 이름 */
-            #results th:nth-child(4) {
-                min-width: 50px;
-            }
-
+            #results th:nth-child(4) { min-width: 50px; }
             /* 상세 */
-            #results th:nth-child(5) {
-                min-width: 85px;
-            }
-
+            #results th:nth-child(5) { min-width: 85px; }
             /* 수량 */
-            #results th:nth-child(6) {
-                min-width: 35px;
-            }
-
+            #results th:nth-child(6) { min-width: 35px; }
             /* 차감금액 */
-            #results th:nth-child(7) {
-                min-width: 70px;
-            }
-
+            #results th:nth-child(7) { min-width: 70px; }
             /* 운송장번호 */
-            #results th:nth-child(8) {
-                min-width: 100px;
-            }
-
+            #results th:nth-child(8) { min-width: 100px; }
             /* 상품명(상세) */
-            #results th:nth-child(9) {
-                min-width: 200px;
-            }
+            #results th:nth-child(9) { min-width: 200px; }
         }
     </style>
 </head>
@@ -118,6 +105,7 @@
     <div class="logo-container">
         <img id="logo" src="https://github.com/jelogistics/jelogistics/blob/main/KakaoTalk_20230911_160851338.png?raw=true" alt="Company Logo">
     </div>
+
     <div id="searchBox">
         <form onsubmit="search(); return false;">
             <label for="employeeId" style="margin-right: 10px;">퀵플렉서 아이디를 입력하세요:</label>
@@ -125,10 +113,9 @@
             <button type="submit">검색</button>
         </form>
     </div>
+
     <div id="results" aria-live="polite"></div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
