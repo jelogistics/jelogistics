@@ -3,7 +3,7 @@ function search() {
   console.log(id);
 
   const spreadsheetId = '1xQ-UhE36gClbOnCo0X5HvEIEkhEHTWxB4wZ4KMYCSHE';
-  const range = '시트1!C1:K300';
+  const range = '시트1!C1:K5000';
   const apiKey = 'AIzaSyCpQ8NBW47VQaFMGujdDHV1cEAY_kOjbrg';
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
@@ -53,3 +53,4 @@ function displayResults(data, id) {
 
   document.getElementById('results').innerHTML = resultsHTML;
 }
+
